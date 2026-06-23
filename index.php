@@ -106,8 +106,18 @@ declare(strict_types=1);
                         class="hero-buttons">
                         <a href="#projects" class="btn-primary-custom">View Projects</a>
                         <a
-                            href="#"
-                            class="btn-secondary-custom">Download CV</a>
+                        href="assets/certificates/cv-1.pdf"
+                        target="_blank"
+                        class="btn-secondary-custom">
+
+                        Download CV
+
+                    </a>
+
+                        <!-- <a
+                            href="/assets/certificates/saabitaParisyaMauladiAzizCv.pdf"
+                            target="_blank"
+                            class="btn-secondary-custom">Download CV</a> -->
                     </div>
                 </div>
                 <div
@@ -155,7 +165,7 @@ declare(strict_types=1);
                         </p>
                         <p> Tanggal Lahir : 03 Mei 2026</p>
                         <p>Pendidikan: D4 Rekayasa Perangkat Lunak</p>
-                        <p>Alamat : Jl. Raya Pulogebang Gg. Penjahit No 23A</p>
+                        <p>Alamat : Jl. Raya Pulogebang Gg. Penjahit</p>
                     </div>
 
                 </div>
