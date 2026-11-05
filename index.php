@@ -1,5 +1,6 @@
 <?php
 declare(strict_types=1);
+require_once __DIR__ . '/includes/security.php';
 ?>
 <!DOCTYPE html>
 <html lang="id">
@@ -80,10 +81,6 @@ declare(strict_types=1);
         <div class="container">
             <div class="row align-items-center g-5">
                 <div class="col-lg-7 order-2 order-lg-1 hero-animate-1">
-                    <div class="hero-status-pill">
-                        <span class="pulse-dot"></span>
-                        <span>Mahasiswa Rekayasa Perangkat Lunak • Available for Projects</span>
-                    </div>
 
                     <h1 class="hero-title">
                         Hi, I'm <br>
@@ -405,46 +402,8 @@ declare(strict_types=1);
             </div>
 
             <div class="row g-4 mb-5">
-                <!-- Project 1: Healventory -->
-                <div class="col-lg-6 reveal-fade-up">
-                    <div class="project-card-modern">
-                        <div class="browser-header-mockup">
-                            <div class="browser-dots">
-                                <span class="browser-dot dot-red"></span>
-                                <span class="browser-dot dot-yellow"></span>
-                                <span class="browser-dot dot-green"></span>
-                            </div>
-                            <div class="browser-url-bar">healventory.gt.tc/public</div>
-                            <i class="fa-solid fa-arrow-up-right-from-square text-muted" style="font-size: 0.75rem;"></i>
-                        </div>
 
-                        <div class="project-preview-wrap">
-                            <img src="assets/img/project1.jpg" alt="Healventory" class="project-preview-img">
-                        </div>
-
-                        <div class="project-body-modern">
-                            <div>
-                                <h3 class="project-heading">Healventory</h3>
-                                <p class="project-summary">
-                                    Sistem Manajemen data dan stok obat di apotik
-                                </p>
-                                <div class="project-tags-wrap">
-                                    <span class="project-tag">PHP Native</span>
-                                    <span class="project-tag">MySQL</span>
-                                    <span class="project-tag">Stock Management</span>
-                                    <span class="project-tag">Bootstrap</span>
-                                </div>
-                            </div>
-
-                            <a href="https://healventory.gt.tc/public/" target="_blank" rel="noopener noreferrer" class="project-btn-live">
-                                <span>Kunjungi Website Proyek</span>
-                                <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project 2: Kinara Pharma -->
+                <!-- Project 1: Kinara Pharma -->
                 <div class="col-lg-6 reveal-fade-up">
                     <div class="project-card-modern">
                         <div class="browser-header-mockup">
@@ -477,6 +436,119 @@ declare(strict_types=1);
 
                             <a href="https://kelompok9.my.id" target="_blank" rel="noopener noreferrer" class="project-btn-live">
                                 <span>Kunjungi Website Proyek</span>
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 reveal-fade-up">
+                    <div class="project-card-modern">
+                        <div class="browser-header-mockup">
+                            <div class="browser-dots">
+                                <span class="browser-dot dot-red"></span>
+                                <span class="browser-dot dot-yellow"></span>
+                                <span class="browser-dot dot-green"></span>
+                            </div>
+                            <div class="browser-url-bar">tsaabitaportfolio.rf.gd</div>
+                            <i class="fa-solid fa-arrow-up-right-from-square text-muted" style="font-size: 0.75rem;"></i>
+                        </div>
+
+                        <div class="project-preview-wrap">
+                            <img src="assets/img/web-tsaabita.png" alt="Mobile Kinara Pharma" class="project-preview-img">
+                        </div>
+
+                        <div class="project-body-modern">
+                            <div>
+                                <h3 class="project-heading">Personal Portofolio </h3>
+                                <p class="project-summary">
+                                    Website Portofolio Tsaabita Parisya Mauladi Aziz
+                                </p>
+                                <div class="project-tags-wrap">
+                                    <span class="project-tag">Web Application</span>
+                                    <span class="project-tag">Portofolio</span>
+                                    <span class="project-tag">Tsaabita Parisya</span>
+                                </div>
+                            </div>
+
+                            <a href="https://tsaabitaportfolio.rf.gd/" target="_blank" rel="noopener noreferrer" class="project-btn-live">
+                                <span>Kunjungi Website </span>
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                                <!-- Project 1: Healventory -->
+                <div class="col-lg-6 reveal-fade-up">
+                    <div class="project-card-modern">
+                        <div class="browser-header-mockup">
+                            <div class="browser-dots">
+                                <span class="browser-dot dot-red"></span>
+                                <span class="browser-dot dot-yellow"></span>
+                                <span class="browser-dot dot-green"></span>
+                            </div>
+                            <div class="browser-url-bar">healventory.gt.tc/public</div>
+                            <i class="fa-solid fa-arrow-up-right-from-square text-muted" style="font-size: 0.75rem;"></i>
+                        </div>
+
+                        <div class="project-preview-wrap">
+                            <img src="assets/img/project1.png" alt="Healventory" class="project-preview-img">
+                        </div>
+
+                        <div class="project-body-modern">
+                            <div>
+                                <h3 class="project-heading">Healventory</h3>
+                                <p class="project-summary">
+                                    Sistem Manajemen data dan stok obat di apotik
+                                </p>
+                                <div class="project-tags-wrap">
+                                    <span class="project-tag">PHP Native</span>
+                                    <span class="project-tag">MySQL</span>
+                                    <span class="project-tag">Stock Management</span>
+                                    <span class="project-tag">Bootstrap</span>
+                                </div>
+                            </div>
+
+                            <a href="https://healventory.gt.tc/public/" target="_blank" rel="noopener noreferrer" class="project-btn-live">
+                                <span>Kunjungi Website Proyek</span>
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 reveal-fade-up">
+                    <div class="project-card-modern">
+                        <div class="browser-header-mockup">
+                            <div class="browser-dots">
+                                <span class="browser-dot dot-red"></span>
+                                <span class="browser-dot dot-yellow"></span>
+                                <span class="browser-dot dot-green"></span>
+                            </div>
+                            <i class="fa-solid fa-arrow-up-right-from-square text-muted" style="font-size: 0.75rem;"></i>
+                        </div>
+
+                        <div class="project-preview-wrap">
+                            <img src="assets/img/mobileKinara.png" alt="Mobile Kinara Pharma" class="project-preview-img">
+                        </div>
+
+                        <div class="project-body-modern">
+                            <div>
+                                <h3 class="project-heading">Mobile POS App</h3>
+                                <p class="project-summary">
+                                    Aplikasi Mobile yang terintegrasi dengan wesite Kinara Pharma
+                                </p>
+                                <div class="project-tags-wrap">
+                                    <span class="project-tag">Mobile Application</span>
+                                    <span class="project-tag">Point of Sale</span>
+                                    <span class="project-tag">Midtrans</span>
+                                    <span class="project-tag">Flutter</span>
+                                </div>
+                            </div>
+
+                            <a href="https://drive.google.com/file/d/12_qNSaipRhD9E3FkpO_OFRGV-1KT8Jov/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="project-btn-live">
+                                <span>Kunjungi Aplikasi</span>
                                 <i class="fa-solid fa-arrow-up-right-from-square"></i>
                             </a>
                         </div>
@@ -618,35 +690,6 @@ declare(strict_types=1);
                 </p>
             </div>
 
-            <!-- SweetAlert Feedback Handling -->
-            <?php if (isset($_GET['status']) && $_GET['status'] === 'success'): ?>
-                <script>
-                    document.addEventListener('DOMContentLoaded', function () {
-                        Swal.fire({
-                            icon: 'success',
-                            title: 'Pesan Berhasil Dikirim',
-                            text: 'Terima kasih telah menghubungi saya. Saya akan merespon sesegera mungkin.',
-                            confirmButtonText: 'OK',
-                            confirmButtonColor: '#3b82f6'
-                        });
-                    });
-                </script>
-            <?php endif; ?>
-
-            <?php if (isset($_GET['status']) && $_GET['status'] === 'error'): ?>
-                <script>
-                    document.addEventListener('DOMContentLoaded', function () {
-                        Swal.fire({
-                            icon: 'error',
-                            title: 'Oops...',
-                            text: 'Pesan gagal dikirim. Silakan coba kembali atau hubungi via email langsung.',
-                            confirmButtonText: 'OK',
-                            confirmButtonColor: '#ef4444'
-                        });
-                    });
-                </script>
-            <?php endif; ?>
-
             <div class="row g-4 align-items-stretch">
                 <!-- Info Column -->
                 <div class="col-lg-5 reveal-fade-up">
@@ -703,6 +746,14 @@ declare(strict_types=1);
                 <div class="col-lg-7 reveal-fade-up">
                     <div class="bento-card">
                         <form action="send-email.php" method="POST">
+                            <!-- CSRF Security Token -->
+                            <input type="hidden" name="csrf_token" value="<?php echo htmlspecialchars($_SESSION['csrf_token'] ?? '', ENT_QUOTES, 'UTF-8'); ?>">
+                            
+                            <!-- Honeypot Anti-Bot Field (Hidden from human visitors) -->
+                            <div style="display:none !important;" aria-hidden="true">
+                                <input type="text" name="website_hp" tabindex="-1" autocomplete="off">
+                            </div>
+
                             <div class="form-group-modern">
                                 <label for="name" class="form-label-modern">Nama Lengkap</label>
                                 <input type="text" id="name" name="name" class="input-modern" placeholder="Masukkan nama Anda" required>

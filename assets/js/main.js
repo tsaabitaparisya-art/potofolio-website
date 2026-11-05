@@ -197,4 +197,34 @@ document.addEventListener('DOMContentLoaded', () => {
     // Fallback for older browsers
     revealElements.forEach(el => el.classList.add('active'));
   }
+
+  // ------------------------------------------------------------------------
+  // 6. Contact Form Submission Status (CSP-Compliant, no inline script)
+  // ------------------------------------------------------------------------
+  const urlParams = new URLSearchParams(window.location.search);
+  const statusParam = urlParams.get('status');
+
+  if (statusParam && typeof Swal !== 'undefined') {
+    if (statusParam === 'success') {
+      Swal.fire({
+        icon: 'success',
+        title: 'Pesan Berhasil Dikirim',
+        text: 'Terima kasih telah menghubungi saya. Saya akan merespon sesegera mungkin.',
+        confirmButtonText: 'OK',
+        confirmButtonColor: '#3b82f6'
+      });
+    } else if (statusParam === 'error') {
+      Swal.fire({
+        icon: 'error',
+        title: 'Oops...',
+        text: 'Pesan gagal dikirim. Silakan coba kembali atau hubungi via email langsung.',
+        confirmButtonText: 'OK',
+        confirmButtonColor: '#ef4444'
+      });
+    }
+
+    // Clean URL query string without reloading page to prevent re-triggering alert
+    const cleanUrl = window.location.protocol + '//' + window.location.host + window.location.pathname;
+    window.history.replaceState({ path: cleanUrl }, '', cleanUrl);
+  }
 });
