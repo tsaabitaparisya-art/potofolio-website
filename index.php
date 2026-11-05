@@ -1,5 +1,4 @@
 <?php
-
 declare(strict_types=1);
 ?>
 <!DOCTYPE html>
@@ -7,664 +6,766 @@ declare(strict_types=1);
 
 <head>
     <meta charset="UTF-8">
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0">
-    <meta
-        name="description"
-        content="Portfolio Tsaabita - Software Engineering Student">
-    <meta
-        name="keywords"
-        content="Portfolio, PHP Developer, Web Developer">
-    <meta
-        name="author"
-        content="Tsaabita">
-    <title>
-        Tsaabita | Portfolio
-    </title>
-    <!-- Bootstrap -->
-    <link
-        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-        rel="stylesheet">
-    <!-- Font -->
-    <link rel="preconnect"
-        href="https://fonts.googleapis.com">
-    <link rel="preconnect"
-        href="https://fonts.gstatic.com"
-        crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
-        rel="stylesheet">
-    <!-- Font Awesome -->
-    <link
-        rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-    <!-- CSS -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio Tsaabita Parisya Mauladi Aziz - Software Engineering Student & Web Developer">
+    <meta name="keywords" content="Portfolio, PHP Developer, Laravel, Web Developer, UI/UX Designer, Tsaabita">
+    <meta name="author" content="Tsaabita Parisya Mauladi Aziz">
+    <title>Tsaabita | Portfolio</title>
+
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Fonts: Inter, Space Grotesk, JetBrains Mono -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome 6.7.2 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
 <body>
-    <!-- CURSOR -->
-    <div class="cursor-dot"></div>
-    <div class="cursor-outline"></div>
-    <!-- AURORA -->
-    <div class="aurora aurora-1"></div>
-    <div class="aurora aurora-2"></div>
-    <!-- NAVBAR -->
-    <nav
-        class="navbar navbar-expand-lg fixed-top custom-navbar">
+    <!-- Subtle Ambient Lighting Mesh -->
+    <div class="ambient-glow" aria-hidden="true"></div>
+
+    <!-- FLOATING ISLAND NAVBAR -->
+    <header class="custom-navbar">
         <div class="container">
-            <div
-                class="collapse navbar-collapse"
-                id="navbarMenu">
-                <ul
-                    class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#home">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#about">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#skills">Skills</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#projects">Projects</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#contact">Contact</a>
-                    </li>
-                </ul>
-                <!-- DARK MODE -->
-                <button
-                    id="themeToggle"
-                    class="theme-btn">
-                    <i class="fa-solid fa-moon"></i>
+            <nav class="navbar navbar-expand-lg navbar-island">
+                <a class="brand-text" href="#home">
+                    TSAABITA<span class="brand-dot">.</span>
+                </a>
+
+                <button class="navbar-toggler-custom d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu" aria-controls="navbarMenu" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fa-solid fa-bars-staggered"></i>
                 </button>
-            </div>
+
+                <div class="collapse navbar-collapse" id="navbarMenu">
+                    <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link-custom active" href="#home">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link-custom" href="#about">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link-custom" href="#skills">Skills</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link-custom" href="#projects">Projects</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link-custom" href="#certificates">Certificates</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link-custom" href="#contact">Contact</a>
+                        </li>
+                    </ul>
+
+                    <div class="nav-actions">
+                        <button id="themeToggle" class="theme-toggle-btn" type="button" aria-label="Toggle dark and light mode">
+                            <i class="fa-solid fa-moon"></i>
+                        </button>
+                    </div>
+                </div>
+            </nav>
         </div>
-    </nav>
-    <!-- HERO -->
-    <section
-        id="home"
-        class="hero">
+    </header>
+
+    <!-- HERO SECTION -->
+    <section id="home" class="hero-section">
         <div class="container">
-            <div
-                class="row align-items-center">
-                <div class="col-lg-7">
-                    <h1 class="hero-title">Tsaabita
-                        <br>Parisya Mauladi Aziz
+            <div class="row align-items-center g-5">
+                <div class="col-lg-7 order-2 order-lg-1 reveal-fade-up">
+                    <div class="hero-status-pill">
+                        <span class="pulse-dot"></span>
+                        <span>Mahasiswa Rekayasa Perangkat Lunak • Available for Projects</span>
+                    </div>
+
+                    <h1 class="hero-title">
+                        Hi, I'm <br>
+                        <span class="name-highlight">Tsaabita Parisya</span><br>
+                        Mauladi Aziz
                     </h1>
-                    <h2 class="hero-role">
-                        <span
-                            class="dynamic-role">
-                        </span>
-                    </h2>
+
+                    <div class="hero-role-badge-row">
+                        <div class="hero-role-badge">
+                            <i class="fa-solid fa-terminal me-2"></i>
+                            <span class="dynamic-role">Software Engineering Student</span>
+                        </div>
+                    </div>
+
                     <p class="hero-description">
                         Mahasiswa Rekayasa Perangkat Lunak yang terus belajar dan berkembang dalam pengembangan web, desain antarmuka, dan teknologi digital.
                     </p>
-                    <div
-                        class="hero-buttons">
-                        <a href="#projects" class="btn-primary-custom">View Projects</a>
-                        <a
-                        href="assets/certificates/cv-1.pdf"
-                        target="_blank"
-                        class="btn-secondary-custom">
 
-                        Download CV
-
-                    </a>
-
-                        <!-- <a
-                            href="/assets/certificates/saabitaParisyaMauladiAzizCv.pdf"
-                            target="_blank"
-                            class="btn-secondary-custom">Download CV</a> -->
+                    <div class="hero-cta-group">
+                        <a href="#projects" class="btn-modern-primary">
+                            <span>View Projects</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                        <a href="assets/certificates/cv-1.pdf" target="_blank" class="btn-modern-secondary">
+                            <i class="fa-solid fa-file-arrow-down"></i>
+                            <span>Download CV</span>
+                        </a>
                     </div>
                 </div>
-                <div
-                    class="col-lg-5">
-                    <div
-                        class="profile-container">
-                        <img
-                            src="assets/img/profile.jpg"
-                            alt="Profile"
-                            class="profile-image">
+
+                <div class="col-lg-5 order-1 order-lg-2 reveal-fade-up">
+                    <div class="profile-showcase">
+                        <div class="profile-frame">
+                            <img src="assets/img/profile.jpg" alt="Tsaabita Parisya Mauladi Aziz" class="profile-img-inner">
+                            <div class="profile-floating-badge">
+                                <div class="floating-icon">
+                                    <i class="fa-solid fa-code"></i>
+                                </div>
+                                <div>
+                                    <div class="floating-text-sm">Specialization</div>
+                                    <div class="floating-text-lg">Web & UI/UX</div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    <!-- ABOUT -->
-    <section
-        id="about"
-        class="section">
+
+    <!-- ABOUT SECTION (BENTO GRID) -->
+    <section id="about" class="section-padding">
         <div class="container">
-            <div class="section-header">
-                <span>ABOUT ME</span>
-                <h2>Who Am I?</h2>
-            </div>
-            <div class="row">
-                <div class="col-lg-7">
-                    <div class="glass-card">
-                        <p>
-                            Saya adalah mahasiswa D4 Rekayasa Perangkat Lunak yang tertarik pada
-                            pengembangan website, desain antarmuka pengguna, dan pengelolaan basis data.
-                            Saat ini saya sedang mempelajari serta mengembangkan kemampuan menggunakan
-                            PHP Native, Laravel, dan MySQL melalui berbagai proyek akademik maupun pribadi.
-                            Saya percaya bahwa proses belajar dan pengalaman praktik merupakan langkah penting
-                            untuk terus berkembang di dunia teknologi.
-                        </p>
-                    </div>
+            <div class="text-center reveal-fade-up">
+                <div class="section-badge">
+                    <i class="fa-regular fa-user"></i>
+                    <span>About Me</span>
                 </div>
-                <div class="col-lg-5">
-                    <div class="glass-card">
-                        <h4>Personal Info</h4>
-                        <hr>
-                        <p>
-                            Nama:
-                            Tsaabita Parisya Mauladi Aziz
-                        </p>
-                        <p> Tanggal Lahir : 03 Mei 2026</p>
-                        <p>Pendidikan: D4 Rekayasa Perangkat Lunak</p>
-                        <p>Alamat : Jl. Raya Pulogebang Gg. Penjahit</p>
-                    </div>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </section>
-
-    <!-- SKILLS -->
-
-    <section
-        id="skills"
-        class="section">
-
-        <div class="container">
-
-            <div
-                class="section-header">
-
-                <span>
-                    SKILLS
-                </span>
-
-                <h2>
-                    Tools & Teknologi
-                </h2>
-                <p class="section-description">
-                    Teknologi dan tools yang saya gunakan dalam proses belajar
-                    dan pengembangan berbagai proyek.
+                <h2 class="section-title">Who Am I?</h2>
+                <p class="section-subtitle text-center">
+                    Dedikasi dalam rekayasa perangkat lunak, eksplorasi teknologi web modern, dan pengalaman praktik berkelanjutan.
                 </p>
             </div>
 
             <div class="row g-4">
-
-                <!-- HTML -->
-                <div class="col-lg-3 col-md-6">
-                    <div class="skill-card">
-                        <i class="fa-brands fa-html5"></i>
-                        <h4>HTML</h4>
-                        <p>
-                            Struktur dasar website yang semantik dan responsif.
-                        </p>
+                <!-- Bento Story Card -->
+                <div class="col-lg-7 reveal-fade-up">
+                    <div class="bento-card bento-about-story">
+                        <div>
+                            <h3 class="h4 mb-3 fw-bold">Eksplorasi & Dedikasi Pengembangan Web</h3>
+                            <p class="mb-3">
+                                Saya adalah mahasiswa D4 Rekayasa Perangkat Lunak yang tertarik pada pengembangan website, desain antarmuka pengguna, dan pengelolaan basis data.
+                            </p>
+                            <p class="mb-0">
+                                Saat ini saya sedang mempelajari serta mengembangkan kemampuan menggunakan PHP Native, Laravel, dan MySQL melalui berbagai proyek akademik maupun pribadi.
+                            </p>
+                        </div>
+                        <div class="about-quote">
+                            "Saya percaya bahwa proses belajar dan pengalaman praktik merupakan langkah penting untuk terus berkembang di dunia teknologi."
+                        </div>
                     </div>
                 </div>
 
-                <!-- CSS -->
-                <div class="col-lg-3 col-md-6">
-                    <div class="skill-card">
-                        <i class="fa-brands fa-css3-alt"></i>
-                        <h4>CSS</h4>
-                        <p>
-                            Styling modern, responsive design, dan animasi.
-                        </p>
+                <!-- Bento Personal Info Card -->
+                <div class="col-lg-5 reveal-fade-up">
+                    <div class="bento-card">
+                        <h4 class="h5 fw-bold mb-4 d-flex align-items-center gap-2">
+                            <i class="fa-solid fa-id-card text-primary"></i>
+                            <span>Personal Info</span>
+                        </h4>
+
+                        <div class="spec-list">
+                            <div class="spec-item">
+                                <div class="spec-icon">
+                                    <i class="fa-solid fa-user"></i>
+                                </div>
+                                <div>
+                                    <div class="spec-label">Nama Lengkap</div>
+                                    <div class="spec-value">Tsaabita Parisya Mauladi Aziz</div>
+                                </div>
+                            </div>
+
+                            <div class="spec-item">
+                                <div class="spec-icon">
+                                    <i class="fa-solid fa-cake-candles"></i>
+                                </div>
+                                <div>
+                                    <div class="spec-label">Tanggal Lahir</div>
+                                    <div class="spec-value">03 Mei 2006</div>
+                                </div>
+                            </div>
+
+                            <div class="spec-item">
+                                <div class="spec-icon">
+                                    <i class="fa-solid fa-graduation-cap"></i>
+                                </div>
+                                <div>
+                                    <div class="spec-label">Pendidikan</div>
+                                    <div class="spec-value">D4 Rekayasa Perangkat Lunak</div>
+                                </div>
+                            </div>
+
+                            <div class="spec-item">
+                                <div class="spec-icon">
+                                    <i class="fa-solid fa-location-dot"></i>
+                                </div>
+                                <div>
+                                    <div class="spec-label">Alamat</div>
+                                    <div class="spec-value">Jl. Raya Pulogebang Gg. Penjahit</div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-
-                <!-- JavaScript -->
-                <div class="col-lg-3 col-md-6">
-                    <div class="skill-card">
-                        <i class="fa-brands fa-js"></i>
-                        <h4>JavaScript</h4>
-                        <p>
-                            Membuat website lebih interaktif dan dinamis.
-                        </p>
-                    </div>
-                </div>
-
-                <!-- PHP -->
-                <div class="col-lg-3 col-md-6">
-                    <div class="skill-card">
-                        <i class="fa-brands fa-php"></i>
-                        <h4>PHP</h4>
-                        <p>
-                            Pengembangan website dinamis menggunakan PHP Native.
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Laravel -->
-                <div class="col-lg-3 col-md-6">
-                    <div class="skill-card">
-                        <i class="fa-brands fa-laravel"></i>
-                        <h4>Laravel</h4>
-                        <p>
-                            Framework PHP untuk membangun aplikasi web modern.
-                        </p>
-                    </div>
-                </div>
-
-                <!-- MySQL -->
-                <div class="col-lg-3 col-md-6">
-                    <div class="skill-card">
-                        <i class="fa-solid fa-database"></i>
-                        <h4>MySQL</h4>
-                        <p>
-                            Mengelola dan merancang basis data relasional.
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Figma -->
-                <div class="col-lg-3 col-md-6">
-                    <div class="skill-card">
-                        <i class="fa-brands fa-figma"></i>
-                        <h4>Figma</h4>
-                        <p>
-                            Mendesain UI/UX dan membuat prototype aplikasi.
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Draw.io -->
-                <div class="col-lg-3 col-md-6">
-                    <div class="skill-card">
-                        <i class="fa-solid fa-diagram-project"></i>
-                        <h4>Draw.io</h4>
-                        <p>
-                            Membuat ERD, UML, dan diagram sistem.
-                        </p>
-                    </div>
-                </div>
-
             </div>
-
         </div>
-
     </section>
 
-
-    <!-- PROJECTS -->
-
-    <section
-        id="projects"
-        class="section">
-
+    <!-- SKILLS SECTION (CATEGORIZED TECH BENTO) -->
+    <section id="skills" class="section-padding">
         <div class="container">
-
-            <div
-                class="section-header">
-
-                <span>
-                    PROJECTS
-                </span>
-
-                <h2>
-                    Featured Projects
-                </h2>
-
+            <div class="text-center reveal-fade-up">
+                <div class="section-badge">
+                    <i class="fa-solid fa-layer-group"></i>
+                    <span>Skills & Toolkit</span>
+                </div>
+                <h2 class="section-title">Tools & Teknologi</h2>
+                <p class="section-subtitle text-center">
+                    Teknologi dan tools yang saya gunakan dalam proses belajar dan pengembangan berbagai proyek.
+                </p>
             </div>
 
-            <div
-                class="row g-4">
+            <div class="row g-4">
+                <!-- Group 1: Backend & Database -->
+                <div class="col-lg-6 reveal-fade-up">
+                    <div class="bento-card h-100">
+                        <div class="tech-category-title">
+                            <i class="fa-solid fa-server"></i>
+                            <span>Backend & Database</span>
+                        </div>
+                        <div class="tech-grid">
+                            <!-- PHP -->
+                            <div class="tech-item">
+                                <div class="tech-item-header">
+                                    <div class="tech-icon-wrap tech-icon-php">
+                                        <i class="fa-brands fa-php"></i>
+                                    </div>
+                                    <div>
+                                        <div class="tech-item-title">PHP</div>
+                                        <div class="tech-badge-sub">Backend Core</div>
+                                    </div>
+                                </div>
+                                <p class="tech-desc">
+                                    Pengembangan website dinamis menggunakan PHP Native.
+                                </p>
+                            </div>
 
-                <div class="col-lg-6">
+                            <!-- Laravel -->
+                            <div class="tech-item">
+                                <div class="tech-item-header">
+                                    <div class="tech-icon-wrap tech-icon-laravel">
+                                        <i class="fa-brands fa-laravel"></i>
+                                    </div>
+                                    <div>
+                                        <div class="tech-item-title">Laravel</div>
+                                        <div class="tech-badge-sub">PHP Framework</div>
+                                    </div>
+                                </div>
+                                <p class="tech-desc">
+                                    Framework PHP untuk membangun aplikasi web modern.
+                                </p>
+                            </div>
 
-                    <div
-                        class="project-card">
-                        <a href="https://healventory.gt.tc/public/"
-                            target="https://healventory.gt.tc/public/"><img
-                                src="assets/img/project1.jpg"
-                                alt="Project" "></a>
-
-
-                        <div
-                            class=" project-content">
-
-                            <h3>
-                                Healventory
-                            </h3>
-
-                            <p>
-                                Sistem Manajemen data dan stok obat di apotik
-                            </p>
+                            <!-- MySQL -->
+                            <div class="tech-item">
+                                <div class="tech-item-header">
+                                    <div class="tech-icon-wrap tech-icon-mysql">
+                                        <i class="fa-solid fa-database"></i>
+                                    </div>
+                                    <div>
+                                        <div class="tech-item-title">MySQL</div>
+                                        <div class="tech-badge-sub">RDBMS</div>
+                                    </div>
+                                </div>
+                                <p class="tech-desc">
+                                    Mengelola dan merancang basis data relasional.
+                                </p>
+                            </div>
+                        </div>
                     </div>
-
                 </div>
 
-            </div>
+                <!-- Group 2: Frontend & UI Tools -->
+                <div class="col-lg-6 reveal-fade-up">
+                    <div class="bento-card h-100">
+                        <div class="tech-category-title">
+                            <i class="fa-solid fa-code"></i>
+                            <span>Frontend & Architecture</span>
+                        </div>
+                        <div class="tech-grid">
+                            <!-- HTML -->
+                            <div class="tech-item">
+                                <div class="tech-item-header">
+                                    <div class="tech-icon-wrap tech-icon-html">
+                                        <i class="fa-brands fa-html5"></i>
+                                    </div>
+                                    <div>
+                                        <div class="tech-item-title">HTML</div>
+                                        <div class="tech-badge-sub">Markup Standard</div>
+                                    </div>
+                                </div>
+                                <p class="tech-desc">
+                                    Struktur dasar website yang semantik dan responsif.
+                                </p>
+                            </div>
 
-            <div class="col-lg-6">
+                            <!-- CSS -->
+                            <div class="tech-item">
+                                <div class="tech-item-header">
+                                    <div class="tech-icon-wrap tech-icon-css">
+                                        <i class="fa-brands fa-css3-alt"></i>
+                                    </div>
+                                    <div>
+                                        <div class="tech-item-title">CSS</div>
+                                        <div class="tech-badge-sub">Styling & Motion</div>
+                                    </div>
+                                </div>
+                                <p class="tech-desc">
+                                    Styling modern, responsive design, dan animasi.
+                                </p>
+                            </div>
 
-                <div
-                    class="project-card">
-                    <a href="https://kelompok9.my.id" target="_blank"><img
-                            src="assets/img/project2.jpg"
-                            alt="Project"></a>
+                            <!-- JavaScript -->
+                            <div class="tech-item">
+                                <div class="tech-item-header">
+                                    <div class="tech-icon-wrap tech-icon-js">
+                                        <i class="fa-brands fa-js"></i>
+                                    </div>
+                                    <div>
+                                        <div class="tech-item-title">JavaScript</div>
+                                        <div class="tech-badge-sub">Interactive Logic</div>
+                                    </div>
+                                </div>
+                                <p class="tech-desc">
+                                    Membuat website lebih interaktif dan dinamis.
+                                </p>
+                            </div>
 
+                            <!-- Figma -->
+                            <div class="tech-item">
+                                <div class="tech-item-header">
+                                    <div class="tech-icon-wrap tech-icon-figma">
+                                        <i class="fa-brands fa-figma"></i>
+                                    </div>
+                                    <div>
+                                        <div class="tech-item-title">Figma</div>
+                                        <div class="tech-badge-sub">UI/UX Prototype</div>
+                                    </div>
+                                </div>
+                                <p class="tech-desc">
+                                    Mendesain UI/UX dan membuat prototype aplikasi.
+                                </p>
+                            </div>
 
-                    <div
-                        class="project-content">
-
-                        <h3>
-                            Kinara Pharma
-                        </h3>
-
-                        <p>
-                            Website manajemen dan penjualan obat apotik
-                        </p>
-
+                            <!-- Draw.io -->
+                            <div class="tech-item">
+                                <div class="tech-item-header">
+                                    <div class="tech-icon-wrap tech-icon-drawio">
+                                        <i class="fa-solid fa-diagram-project"></i>
+                                    </div>
+                                    <div>
+                                        <div class="tech-item-title">Draw.io</div>
+                                        <div class="tech-badge-sub">System Diagrams</div>
+                                    </div>
+                                </div>
+                                <p class="tech-desc">
+                                    Membuat ERD, UML, dan diagram sistem.
+                                </p>
+                            </div>
+                        </div>
                     </div>
-
                 </div>
-
             </div>
-
-                </div>
-
-            </div>
-
         </div>
-        <section class="section">
+    </section>
 
-            <div class="container">
+    <!-- PROJECTS SECTION (FEATURED CASE STUDIES) -->
+    <section id="projects" class="section-padding">
+        <div class="container">
+            <div class="text-center reveal-fade-up">
+                <div class="section-badge">
+                    <i class="fa-solid fa-folder-open"></i>
+                    <span>Showcase</span>
+                </div>
+                <h2 class="section-title">Featured Projects</h2>
+                <p class="section-subtitle text-center">
+                    Aplikasi web fungsional yang dirancang untuk menjawab kebutuhan nyata operasional dan manajemen data.
+                </p>
+            </div>
 
-                <div class="row g-4">
+            <div class="row g-4 mb-5">
+                <!-- Project 1: Healventory -->
+                <div class="col-lg-6 reveal-fade-up">
+                    <div class="project-card-modern">
+                        <div class="browser-header-mockup">
+                            <div class="browser-dots">
+                                <span class="browser-dot dot-red"></span>
+                                <span class="browser-dot dot-yellow"></span>
+                                <span class="browser-dot dot-green"></span>
+                            </div>
+                            <div class="browser-url-bar">healventory.gt.tc/public</div>
+                            <i class="fa-solid fa-arrow-up-right-from-square text-muted" style="font-size: 0.75rem;"></i>
+                        </div>
 
-                    <div class="col-md-6">
+                        <div class="project-preview-wrap">
+                            <img src="assets/img/project1.jpg" alt="Healventory" class="project-preview-img">
+                        </div>
 
-                        <a href="https://github.com/tsaabitaparisya-art"
-                            target="_blank"
-                            class="quick-link-card">
+                        <div class="project-body-modern">
+                            <div>
+                                <h3 class="project-heading">Healventory</h3>
+                                <p class="project-summary">
+                                    Sistem Manajemen data dan stok obat di apotik
+                                </p>
+                                <div class="project-tags-wrap">
+                                    <span class="project-tag">PHP Native</span>
+                                    <span class="project-tag">MySQL</span>
+                                    <span class="project-tag">Stock Management</span>
+                                    <span class="project-tag">Bootstrap</span>
+                                </div>
+                            </div>
 
+                            <a href="https://healventory.gt.tc/public/" target="_blank" rel="noopener noreferrer" class="project-btn-live">
+                                <span>Kunjungi Website Proyek</span>
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2: Kinara Pharma -->
+                <div class="col-lg-6 reveal-fade-up">
+                    <div class="project-card-modern">
+                        <div class="browser-header-mockup">
+                            <div class="browser-dots">
+                                <span class="browser-dot dot-red"></span>
+                                <span class="browser-dot dot-yellow"></span>
+                                <span class="browser-dot dot-green"></span>
+                            </div>
+                            <div class="browser-url-bar">kelompok9.my.id</div>
+                            <i class="fa-solid fa-arrow-up-right-from-square text-muted" style="font-size: 0.75rem;"></i>
+                        </div>
+
+                        <div class="project-preview-wrap">
+                            <img src="assets/img/project2.jpg" alt="Kinara Pharma" class="project-preview-img">
+                        </div>
+
+                        <div class="project-body-modern">
+                            <div>
+                                <h3 class="project-heading">Kinara Pharma</h3>
+                                <p class="project-summary">
+                                    Website manajemen dan penjualan obat apotik
+                                </p>
+                                <div class="project-tags-wrap">
+                                    <span class="project-tag">Web Application</span>
+                                    <span class="project-tag">Point of Sale</span>
+                                    <span class="project-tag">Pharmacy</span>
+                                    <span class="project-tag">Database</span>
+                                </div>
+                            </div>
+
+                            <a href="https://kelompok9.my.id" target="_blank" rel="noopener noreferrer" class="project-btn-live">
+                                <span>Kunjungi Website Proyek</span>
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Ecosystem Quick-links (GitHub & Figma) -->
+            <div class="row g-4">
+                <div class="col-md-6 reveal-fade-up">
+                    <a href="https://github.com/tsaabitaparisya-art" target="_blank" rel="noopener noreferrer" class="ecosystem-card">
+                        <div class="ecosystem-icon ecosystem-icon-github">
                             <i class="fa-brands fa-github"></i>
-
-                            <h3>GitHub</h3>
-
-                            <p>
-                                Lihat source code project saya
+                        </div>
+                        <div>
+                            <div class="ecosystem-title">
+                                <span>GitHub Repository</span>
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                            </div>
+                            <p class="ecosystem-desc">
+                                Lihat source code project dan riwayat repositori yang telah saya bangun.
                             </p>
+                        </div>
+                    </a>
+                </div>
 
-                        </a>
-
-                    </div>
-
-                    <div class="col-md-6">
-
-                        <a href="https://www.figma.com/files/team/1415637872250513289/recents-and-sharing?fuid=1415637870082017477"
-                            target="_blank"
-                            class="quick-link-card">
-
+                <div class="col-md-6 reveal-fade-up">
+                    <a href="https://www.figma.com/files/team/1415637872250513289/recents-and-sharing?fuid=1415637870082017477" target="_blank" rel="noopener noreferrer" class="ecosystem-card">
+                        <div class="ecosystem-icon ecosystem-icon-figma">
                             <i class="fa-brands fa-figma"></i>
-
-                            <h3>UI / UX Design</h3>
-
-                            <p>
-                                Jelajahi desain dan prototype yang saya buat menggunakan Figma
+                        </div>
+                        <div>
+                            <div class="ecosystem-title">
+                                <span>UI / UX Design Workspace</span>
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                            </div>
+                            <p class="ecosystem-desc">
+                                Jelajahi desain antarmuka, wireframe, dan prototype interaktif yang saya rancang di Figma.
                             </p>
-                        </a></div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
     </section>
-    <!-- CERTIFICATES -->
 
-<section id="certificates" class="section">
-
-    <div class="container">
-
-        <div class="section-header">
-
-            <span>CERTIFICATES</span>
-
-            <h2>My Certificates</h2>
-
-            <p class="section-description">
-                Beberapa sertifikat yang saya peroleh selama proses belajar
-                dan pengembangan kemampuan di bidang teknologi.
-            </p>
-
-        </div>
-
-        <div class="certificate-wrapper">
-
-            <!-- Certificate 1 -->
-
-            <div class="certificate-card">
-
-                <div class="certificate-image">
-
-                    <img
-                        src="assets/img/certificate-1.jpg"
-                        alt="Certificate 1">
-
-                </div>
-
-                <div class="certificate-content">
-
-                    <h3>Peserta Lomba UI/UX Design</h3>
-
-                    <p>
-                        Techomfest, Politeknik Negeri Semarang
-                    </p>
-
-                    <a
-                        href="assets/certificates/certificate1.pdf"
-                        target="_blank"
-                        class="certificate-btn">
-
-                        View Certificate
-
-                    </a>
-
-                </div>
-
-            </div>
-
-            <!-- Certificate 2 -->
-
-            <div class="certificate-card">
-
-                <div class="certificate-image">
-
-                    <img
-                        src="assets/img/certificate-2.jpg"
-                        alt="Certificate 2">
-
-                </div>
-
-                <div class="certificate-content">
-
-                    <h3>Peserta Lomba UI/UX Design</h3>
-
-                    <p>
-                        TechsSprint, CodeLab Indonesia
-                    </p>
-
-                    <a
-                        href="assets/certificates/certificate2.pdf"
-                        target="_blank"
-                        class="certificate-btn">
-
-                        View Certificate
-
-                    </a>
-
-                </div>
-
-            </div>
-
-            <!-- Certificate 3 -->
-
-            <div class="certificate-card">
-
-                <div class="certificate-image">
-
-                    <img
-                        src="assets/img/certificate-3.jpg"
-                        alt="Certificate 3">
-
-                </div>
-
-                <div class="certificate-content">
-
-                    <h3>Pelatihan Red Hat System Administration I (RH124-RHA)-ver.10</h3>
-
-                    <p>
-                        Red Hat
-                    </p>
-
-                    <a
-                        href="assets/certificates/certificate3.pdf"
-                        target="_blank"
-                        class="certificate-btn">
-
-                        View Certificate
-
-                    </a>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-    <!-- CONTACT -->
-
-    <section
-        id="contact"
-        class="section">
-
+    <!-- CERTIFICATES SECTION -->
+    <section id="certificates" class="section-padding">
         <div class="container">
-
-            <div
-                class="section-header">
-
-                <span>
-                    CONTACT
-                </span>
-
-                <h2>
-                    Let's Work Together
-                </h2>
-
+            <div class="text-center reveal-fade-up">
+                <div class="section-badge">
+                    <i class="fa-solid fa-award"></i>
+                    <span>Credentials</span>
+                </div>
+                <h2 class="section-title">My Certificates</h2>
+                <p class="section-subtitle text-center">
+                    Beberapa sertifikat yang saya peroleh selama proses belajar dan pengembangan kemampuan di bidang teknologi.
+                </p>
             </div>
-<div class="glass-card">
 
-    <?php if(isset($_GET['status']) && $_GET['status'] == 'success'): ?>
+            <div class="row g-4">
+                <!-- Certificate 1 -->
+                <div class="col-12 reveal-fade-up">
+                    <div class="cert-card-modern">
+                        <div class="cert-thumbnail-wrap">
+                            <img src="assets/img/certificate-1.jpg" alt="Peserta Lomba UI/UX Design" class="cert-thumbnail">
+                        </div>
+                        <div class="cert-details">
+                            <div class="cert-badge-org">
+                                <i class="fa-solid fa-trophy"></i>
+                                <span>Kompetisi Desain</span>
+                            </div>
+                            <h3 class="cert-title">Peserta Lomba UI/UX Design</h3>
+                            <p class="cert-issuer">Techomfest, Politeknik Negeri Semarang</p>
+                            <a href="assets/certificates/certificate1.pdf" target="_blank" class="cert-action-btn">
+                                <i class="fa-solid fa-file-pdf"></i>
+                                <span>View Certificate</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
 
-        <script>
-            document.addEventListener('DOMContentLoaded', function () {
+                <!-- Certificate 2 -->
+                <div class="col-12 reveal-fade-up">
+                    <div class="cert-card-modern">
+                        <div class="cert-thumbnail-wrap">
+                            <img src="assets/img/certificate-2.jpg" alt="Peserta Lomba UI/UX Design" class="cert-thumbnail">
+                        </div>
+                        <div class="cert-details">
+                            <div class="cert-badge-org">
+                                <i class="fa-solid fa-trophy"></i>
+                                <span>Kompetisi Desain</span>
+                            </div>
+                            <h3 class="cert-title">Peserta Lomba UI/UX Design</h3>
+                            <p class="cert-issuer">TechsSprint, CodeLab Indonesia</p>
+                            <a href="assets/certificates/certificate2.pdf" target="_blank" class="cert-action-btn">
+                                <i class="fa-solid fa-file-pdf"></i>
+                                <span>View Certificate</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
 
-                Swal.fire({
-                    icon: 'success',
-                    title: 'Pesan Berhasil Dikirim',
-                    text: 'Terima kasih telah menghubungi saya.',
-                    confirmButtonText: 'OK'
-                });
-
-            });
-        </script>
-
-    <?php endif; ?>
-
-    <?php if(isset($_GET['status']) && $_GET['status'] == 'error'): ?>
-
-        <script>
-            document.addEventListener('DOMContentLoaded', function () {
-
-                Swal.fire({
-                    icon: 'error',
-                    title: 'Oops...',
-                    text: 'Pesan gagal dikirim.',
-                    confirmButtonText: 'OK'
-                });
-
-            });
-        </script>
-
-    <?php endif; ?>
-
-    <form action="send-email.php" method="POST">
-
-        <div class="mb-3">
-
-            <input
-                type="text"
-                name="name"
-                class="form-control"
-                placeholder="Nama Lengkap"
-                required>
-
+                <!-- Certificate 3 -->
+                <div class="col-12 reveal-fade-up">
+                    <div class="cert-card-modern">
+                        <div class="cert-thumbnail-wrap">
+                            <img src="assets/img/certificate-3.jpg" alt="Pelatihan Red Hat System Administration" class="cert-thumbnail">
+                        </div>
+                        <div class="cert-details">
+                            <div class="cert-badge-org">
+                                <i class="fa-brands fa-redhat"></i>
+                                <span>Professional Training</span>
+                            </div>
+                            <h3 class="cert-title">Pelatihan Red Hat System Administration I (RH124-RHA)-ver.10</h3>
+                            <p class="cert-issuer">Red Hat</p>
+                            <a href="assets/certificates/certificate3.pdf" target="_blank" class="cert-action-btn">
+                                <i class="fa-solid fa-file-pdf"></i>
+                                <span>View Certificate</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
+    </section>
 
-        <div class="mb-3">
+    <!-- CONTACT SECTION (SPLIT BENTO) -->
+    <section id="contact" class="section-padding">
+        <div class="container">
+            <div class="text-center reveal-fade-up">
+                <div class="section-badge">
+                    <i class="fa-regular fa-paper-plane"></i>
+                    <span>Get in Touch</span>
+                </div>
+                <h2 class="section-title">Let's Work Together</h2>
+                <p class="section-subtitle text-center">
+                    Terbuka untuk diskusi proyek, kolaborasi pengembangan aplikasi, maupun peluang magang.
+                </p>
+            </div>
 
-            <input
-                type="email"
-                name="email"
-                class="form-control"
-                placeholder="Alamat Email"
-                required>
+            <!-- SweetAlert Feedback Handling -->
+            <?php if (isset($_GET['status']) && $_GET['status'] === 'success'): ?>
+                <script>
+                    document.addEventListener('DOMContentLoaded', function () {
+                        Swal.fire({
+                            icon: 'success',
+                            title: 'Pesan Berhasil Dikirim',
+                            text: 'Terima kasih telah menghubungi saya. Saya akan merespon sesegera mungkin.',
+                            confirmButtonText: 'OK',
+                            confirmButtonColor: '#3b82f6'
+                        });
+                    });
+                </script>
+            <?php endif; ?>
 
+            <?php if (isset($_GET['status']) && $_GET['status'] === 'error'): ?>
+                <script>
+                    document.addEventListener('DOMContentLoaded', function () {
+                        Swal.fire({
+                            icon: 'error',
+                            title: 'Oops...',
+                            text: 'Pesan gagal dikirim. Silakan coba kembali atau hubungi via email langsung.',
+                            confirmButtonText: 'OK',
+                            confirmButtonColor: '#ef4444'
+                        });
+                    });
+                </script>
+            <?php endif; ?>
+
+            <div class="row g-4 align-items-stretch">
+                <!-- Info Column -->
+                <div class="col-lg-5 reveal-fade-up">
+                    <div class="bento-card contact-info-card">
+                        <div>
+                            <h3 class="h4 fw-bold mb-3">Kontak & Kolaborasi</h3>
+                            <p class="mb-4">
+                                Jangan ragu untuk menghubungi saya melalui formulir di samping atau melalui kanal informasi di bawah ini.
+                            </p>
+
+                            <div class="contact-channels">
+                                <a href="mailto:tsaabitaparisya0306@gmail.com" class="contact-channel-item">
+                                    <div class="channel-icon">
+                                        <i class="fa-regular fa-envelope"></i>
+                                    </div>
+                                    <div>
+                                        <div class="channel-label">Email Langsung</div>
+                                        <div class="channel-value">tsaabitaparisya0306@gmail.com</div>
+                                    </div>
+                                </a>
+
+                                <div class="contact-channel-item">
+                                    <div class="channel-icon">
+                                        <i class="fa-solid fa-location-dot"></i>
+                                    </div>
+                                    <div>
+                                        <div class="channel-label">Lokasi Domisili</div>
+                                        <div class="channel-value">Pulogebang, Jakarta Timur</div>
+                                    </div>
+                                </div>
+
+                                <div class="contact-channel-item">
+                                    <div class="channel-icon">
+                                        <i class="fa-solid fa-clock"></i>
+                                    </div>
+                                    <div>
+                                        <div class="channel-label">Status Respon</div>
+                                        <div class="channel-value">Aktif & Siap Berkolaborasi</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mt-4 pt-3 border-top border-secondary border-opacity-10">
+                            <span class="text-subtle small">
+                                <i class="fa-solid fa-shield-halved me-1 text-primary"></i>
+                                Pesan Anda akan dikirimkan secara aman langsung ke email pribadi saya.
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Form Column -->
+                <div class="col-lg-7 reveal-fade-up">
+                    <div class="bento-card">
+                        <form action="send-email.php" method="POST">
+                            <div class="form-group-modern">
+                                <label for="name" class="form-label-modern">Nama Lengkap</label>
+                                <input type="text" id="name" name="name" class="input-modern" placeholder="Masukkan nama Anda" required>
+                            </div>
+
+                            <div class="form-group-modern">
+                                <label for="email" class="form-label-modern">Alamat Email</label>
+                                <input type="email" id="email" name="email" class="input-modern" placeholder="email@contoh.com" required>
+                            </div>
+
+                            <div class="form-group-modern">
+                                <label for="subject" class="form-label-modern">Subjek</label>
+                                <input type="text" id="subject" name="subject" class="input-modern" placeholder="Tujuan pesan atau topik diskusi" required>
+                            </div>
+
+                            <div class="form-group-modern">
+                                <label for="message" class="form-label-modern">Pesan</label>
+                                <textarea id="message" name="message" rows="4" class="input-modern" placeholder="Tuliskan pesan atau detail kebutuhan Anda..." required></textarea>
+                            </div>
+
+                            <button type="submit" class="btn-form-submit">
+                                <span>Kirim Pesan</span>
+                                <i class="fa-solid fa-paper-plane"></i>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
         </div>
+    </section>
 
-        <div class="mb-3">
+    <!-- MODERN CLEAN FOOTER -->
+    <footer class="modern-footer">
+        <div class="container">
+            <div class="footer-content">
+                <p class="footer-copy">
+                    &copy; <?php echo date('Y'); ?> Tsaabita Parisya Mauladi Aziz. All rights reserved.
+                </p>
 
-            <input
-                type="text"
-                name="subject"
-                class="form-control"
-                placeholder="Subjek"
-                required>
-
-        </div>
-
-        <div class="mb-3">
-
-            <textarea
-                name="message"
-                rows="5"
-                class="form-control"
-                placeholder="Tulis pesan Anda..."
-                required></textarea>
-        </div>
-        <button
-            type="submit"
-            class="btn-primary-custom">
-            Kirim Pesan
-        </button>
-    </form>
-</div>
-    <!-- FOOTER -->
-    <footer>
-            <p>
-                © <?php echo date('Y'); ?>
-                Tsaabita Portfolio
-            </p>
+                <div class="footer-social-links">
+                    <a href="https://github.com/tsaabitaparisya-art" target="_blank" rel="noopener noreferrer" class="footer-icon-link" aria-label="GitHub">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+                    <a href="https://www.figma.com/files/team/1415637872250513289/recents-and-sharing?fuid=1415637870082017477" target="_blank" rel="noopener noreferrer" class="footer-icon-link" aria-label="Figma">
+                        <i class="fa-brands fa-figma"></i>
+                    </a>
+                    <a href="mailto:tsaabitaparisya0306@gmail.com" class="footer-icon-link" aria-label="Email">
+                        <i class="fa-regular fa-envelope"></i>
+                    </a>
+                </div>
+            </div>
         </div>
     </footer>
-    <script
-        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
-    </script>
-    <script
-        src="assets/js/main.js">
-    </script>
-<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <!-- SCROLL TO TOP FLOATING BUTTON -->
+    <button id="scrollTopBtn" class="scroll-top-btn" type="button" aria-label="Scroll to top">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <!-- SCRIPTS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="assets/js/main.js"></script>
 </body>
 
 </html>
