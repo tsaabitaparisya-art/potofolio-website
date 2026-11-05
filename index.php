@@ -46,22 +46,22 @@ declare(strict_types=1);
                 <div class="collapse navbar-collapse" id="navbarMenu">
                     <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link-custom active" href="#home">Home</a>
+                            <a class="nav-link nav-link-custom active" href="#home">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link-custom" href="#about">About</a>
+                            <a class="nav-link nav-link-custom" href="#about">About</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link-custom" href="#skills">Skills</a>
+                            <a class="nav-link nav-link-custom" href="#skills">Skills</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link-custom" href="#projects">Projects</a>
+                            <a class="nav-link nav-link-custom" href="#projects">Projects</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link-custom" href="#certificates">Certificates</a>
+                            <a class="nav-link nav-link-custom" href="#certificates">Certificates</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link-custom" href="#contact">Contact</a>
+                            <a class="nav-link nav-link-custom" href="#contact">Contact</a>
                         </li>
                     </ul>
 
@@ -79,7 +79,7 @@ declare(strict_types=1);
     <section id="home" class="hero-section">
         <div class="container">
             <div class="row align-items-center g-5">
-                <div class="col-lg-7 order-2 order-lg-1 reveal-fade-up">
+                <div class="col-lg-7 order-2 order-lg-1 hero-animate-1">
                     <div class="hero-status-pill">
                         <span class="pulse-dot"></span>
                         <span>Mahasiswa Rekayasa Perangkat Lunak • Available for Projects</span>
@@ -114,7 +114,7 @@ declare(strict_types=1);
                     </div>
                 </div>
 
-                <div class="col-lg-5 order-1 order-lg-2 reveal-fade-up">
+                <div class="col-lg-5 order-1 order-lg-2 hero-animate-profile">
                     <div class="profile-showcase">
                         <div class="profile-frame">
                             <img src="assets/img/profile.jpg" alt="Tsaabita Parisya Mauladi Aziz" class="profile-img-inner">

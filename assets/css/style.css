@@ -1,27 +1,18 @@
-/* ==========================================================================
-   TSAABITA PORTFOLIO - MODERN DESIGN SYSTEM (ANTI-AI-SLOP & BENTO STYLE)
-   ========================================================================== */
 
-/* --------------------------------------------------------------------------
-   1. Google Fonts
-   -------------------------------------------------------------------------- */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
 
-/* --------------------------------------------------------------------------
-   2. Design Tokens & Variables
-   -------------------------------------------------------------------------- */
 :root {
   /* Color Palette - Dark Obsidian Theme (Default) */
   --bg-base: #090d16;
   --bg-subtle: #0d1322;
-  --bg-card: rgba(16, 24, 40, 0.72);
-  --bg-card-hover: rgba(22, 33, 56, 0.85);
-  --bg-card-elevated: #111a2e;
-  --bg-inset: rgba(255, 255, 255, 0.03);
+  --bg-card: rgba(30, 41, 65, 0.82);
+  --bg-card-hover: rgba(38, 52, 80, 0.92);
+  --bg-card-elevated: #1a2642;
+  --bg-inset: rgba(255, 255, 255, 0.05);
 
   /* Borders & Dividers */
-  --border-subtle: rgba(255, 255, 255, 0.08);
-  --border-card: rgba(255, 255, 255, 0.1);
+  --border-subtle: rgba(255, 255, 255, 0.12);
+  --border-card: rgba(255, 255, 255, 0.15);
   --border-card-hover: rgba(99, 102, 241, 0.4);
   --border-accent: rgba(59, 130, 246, 0.5);
 
@@ -228,8 +219,10 @@ img {
   font-weight: 700;
   margin-bottom: 14px;
   background: var(--grad-text);
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  color: transparent;
 }
 
 .section-subtitle {
@@ -292,14 +285,21 @@ body.light-mode .navbar-island {
   color: var(--primary);
 }
 
+.navbar-island .navbar-nav {
+  gap: 4px;
+  align-items: center;
+}
+
 .nav-link-custom {
   position: relative;
-  font-size: 0.9rem;
+  font-size: 0.88rem;
   font-weight: 500;
   color: var(--text-muted) !important;
-  padding: 8px 16px !important;
+  padding: 8px 14px !important;
   border-radius: var(--radius-full);
   transition: color var(--transition-fast), background var(--transition-fast);
+  white-space: nowrap;
+  text-decoration: none !important;
 }
 
 .nav-link-custom:hover {
@@ -452,8 +452,45 @@ body.light-mode .navbar-island {
 
 .hero-title .name-highlight {
   background: var(--grad-accent-text);
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+/* Hero CSS Entrance Animations (auto-play, no JS needed) */
+.hero-animate-1 {
+  animation: heroFadeUp 0.7s ease both;
+}
+
+.hero-animate-2 {
+  animation: heroFadeUp 0.7s ease 0.15s both;
+}
+
+.hero-animate-profile {
+  animation: heroFadeIn 0.8s ease 0.3s both;
+}
+
+@keyframes heroFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(32px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes heroFadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 
 .hero-role-badge-row {

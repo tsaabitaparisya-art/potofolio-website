@@ -94,7 +94,20 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // ------------------------------------------------------------------------
-  // 3. Navbar Scroll Effect & Scrollspy
+  // 3. Scroll To Top Button (defined before scroll handler)
+  // ------------------------------------------------------------------------
+  const scrollTopBtn = document.getElementById('scrollTopBtn');
+  if (scrollTopBtn) {
+    scrollTopBtn.addEventListener('click', () => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+  }
+
+  // ------------------------------------------------------------------------
+  // 4. Navbar Scroll Effect & Scrollspy
   // ------------------------------------------------------------------------
   const navbar = document.querySelector('.custom-navbar');
   const sections = document.querySelectorAll('section[id]');
@@ -153,11 +166,6 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   });
-
-  // ------------------------------------------------------------------------
-  // 4. Scroll To Top Button
-  // ------------------------------------------------------------------------
-  const scrollTopBtn = document.getElementById('scrollTopBtn');
   if (scrollTopBtn) {
     scrollTopBtn.addEventListener('click', () => {
       window.scrollTo({
