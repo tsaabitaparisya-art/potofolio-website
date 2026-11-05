@@ -2,33 +2,34 @@
 /**
  * ==========================================================================
  * SECURITY BOOTSTRAP & HEADERS
- * Addresses OWASP ZAP Alerts:
- * - Content Security Policy (CSP) Header Not Set (Medium)
+ * Fully compliant with OWASP ZAP & CSP Level 3 Standards
+ * Eliminates:
+ * - CSP: style-src unsafe-inline (Medium)
+ * - CSP: Wildcard Directive (Medium)
+ * - Content Security Policy Header Not Set (Medium)
  * - Missing Anti-clickjacking Header (Medium)
  * - Strict-Transport-Security Header Not Set (Low)
  * - X-Content-Type-Options Header Missing (Low)
- * - Cache-control Directives & Session Security
  * ==========================================================================
  */
 
 declare(strict_types=1);
 
-// 1. Prevent clickjacking (Anti-Clickjacking Header - ZAP Medium)
+// 1. Prevent Clickjacking
 header('X-Frame-Options: SAMEORIGIN');
 
-// 2. Prevent MIME type sniffing (ZAP Low)
+// 2. Prevent MIME Sniffing
 header('X-Content-Type-Options: nosniff');
 
-// 3. HTTP Strict Transport Security - HSTS (ZAP Low)
+// 3. HTTP Strict Transport Security (HSTS)
 header('Strict-Transport-Security: max-age=31536000; includeSubDomains; preload');
 
-// 4. Content Security Policy - CSP (ZAP Medium)
-// Allows Bootstrap, SweetAlert, Google Fonts, and Font Awesome while blocking unauthorized scripts/frames
+// 4. Strict Content Security Policy (No unsafe-inline styles, no wildcard schemes)
 $cspDirectives = [
     "default-src 'self'",
     "script-src 'self' https://cdn.jsdelivr.net",
-    "style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://fonts.googleapis.com https://cdnjs.cloudflare.com",
-    "img-src 'self' data: https:",
+    "style-src 'self' https://cdn.jsdelivr.net https://fonts.googleapis.com https://cdnjs.cloudflare.com",
+    "img-src 'self' data:",
     "font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com",
     "connect-src 'self'",
     "frame-ancestors 'self'",
@@ -41,10 +42,10 @@ header('Content-Security-Policy: ' . implode('; ', $cspDirectives));
 // 5. Referrer Policy
 header('Referrer-Policy: strict-origin-when-cross-origin');
 
-// 6. Permissions Policy (Disables unused sensitive hardware APIs)
+// 6. Permissions Policy
 header('Permissions-Policy: camera=(), microphone=(), geolocation=(), payment=(), usb=()');
 
-// 7. Cross-Origin Protection
+// 7. Cross-Origin Opener Policy
 header('Cross-Origin-Opener-Policy: same-origin');
 
 // 8. Prevent caching on dynamic/sensitive processing

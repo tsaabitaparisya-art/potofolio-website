@@ -1,9 +1,3 @@
-/**
- * ==========================================================================
- * TSAABITA PORTFOLIO - MAIN JAVASCRIPT
- * ==========================================================================
- */
-
 document.addEventListener('DOMContentLoaded', () => {
   // ------------------------------------------------------------------------
   // 1. Dark / Light Mode Toggle
@@ -227,4 +221,41 @@ document.addEventListener('DOMContentLoaded', () => {
     const cleanUrl = window.location.protocol + '//' + window.location.host + window.location.pathname;
     window.history.replaceState({ path: cleanUrl }, '', cleanUrl);
   }
+
+  // ------------------------------------------------------------------------
+  // 7. Interactive 3D Perspective Tilt on Profile Frame
+  // ------------------------------------------------------------------------
+  const profileContainer = document.querySelector('.profile-showcase');
+  const profileFrame = document.querySelector('.profile-frame');
+
+  if (profileContainer && profileFrame) {
+    profileContainer.addEventListener('mousemove', (e) => {
+      const rect = profileContainer.getBoundingClientRect();
+      const x = e.clientX - rect.left - rect.width / 2;
+      const y = e.clientY - rect.top - rect.height / 2;
+
+      const rotateX = (-y / (rect.height / 2)) * 10;
+      const rotateY = (x / (rect.width / 2)) * 10;
+
+      profileFrame.style.transform = `perspective(1000px) rotateX(${rotateX.toFixed(2)}deg) rotateY(${rotateY.toFixed(2)}deg) scale3d(1.02, 1.02, 1.02)`;
+    });
+
+    profileContainer.addEventListener('mouseleave', () => {
+      profileFrame.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)';
+    });
+  }
+
+  // ------------------------------------------------------------------------
+  // 8. Dynamic Mouse Spotlight Effect on Cards
+  // ------------------------------------------------------------------------
+  const spotlightCards = document.querySelectorAll('.bento-card, .project-card-modern, .cert-card-modern');
+  spotlightCards.forEach(card => {
+    card.addEventListener('mousemove', (e) => {
+      const rect = card.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+      card.style.setProperty('--mouse-x', `${x}px`);
+      card.style.setProperty('--mouse-y', `${y}px`);
+    });
+  });
 });
