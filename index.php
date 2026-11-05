@@ -140,7 +140,7 @@ $siteUrl = ($host === 'localhost' || str_starts_with($host, '127.0.0.1'))
                             <span>View Projects</span>
                             <i class="fa-solid fa-arrow-right"></i>
                         </a>
-                        <a href="assets/certificates/CV_tsaabita.pdf" target="_blank" class="btn-modern-secondary">
+                        <a href="assets/certificates/CV_Tsaabita.pdf" target="_blank" class="btn-modern-secondary">
                             <i class="fa-solid fa-file-arrow-down"></i>
                             <span>Download CV</span>
                         </a>
